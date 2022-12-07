@@ -18,10 +18,33 @@
 ## install.package('attachment') # if needed.
 attachment::att_amend_desc()
 
+usethis::use_package("DT")
+usethis::use_package("plyr")
+usethis::use_package("sommer", type = "Depends")
+usethis::use_package("utils")
+usethis::use_package("shiny")
+usethis::use_package("shinydashboard")
+usethis::use_package("MASS")
+usethis::use_package("plotly")
+# usethis::use_dev_package("cgiarBase", type = "Imports", remote = "covaruber/cgiarBase")
+usethis::use_dev_package("cgiarFTDA", type = "Depends", remote = "covaruber/cgiarFTDA")
+usethis::use_dev_package("cgiarPIPE", type = "Depends", remote = "covaruber/cgiarPIPE")
+
 ## Add modules ----
 ## Create a module infrastructure in R/
-golem::add_module(name = "name_of_module1", with_test = TRUE) # Name of the module
-golem::add_module(name = "name_of_module2", with_test = TRUE) # Name of the module
+golem::add_module(name = "home1", with_test = TRUE) # Name of the module
+golem::add_module(name = "cleanpApp", with_test = TRUE) # Name of the module
+golem::add_module(name = "cleanmApp", with_test = TRUE) # Name of the module
+golem::add_module(name = "cleanrApp", with_test = TRUE) # Name of the module
+golem::add_module(name = "staApp", with_test = TRUE) # Name of the module
+golem::add_module(name = "metApp", with_test = TRUE) # Name of the module
+golem::add_module(name = "indexApp", with_test = TRUE) # Name of the module
+golem::add_module(name = "ocsApp", with_test = TRUE) # Name of the module
+golem::add_module(name = "pggApp", with_test = TRUE) # Name of the module
+golem::add_module(name = "rggApp", with_test = TRUE) # Name of the module
+golem::add_module(name = "grmApp", with_test = TRUE) # Name of the module
+golem::add_module(name = "nrmApp", with_test = TRUE) # Name of the module
+golem::add_module(name = "gwaApp", with_test = TRUE) # Name of the module
 
 ## Add helper functions ----
 ## Creates fct_* and utils_*
@@ -54,7 +77,7 @@ devtools::build_vignettes()
 usethis::use_coverage()
 
 # Create a summary readme for the testthat subdirectory
-covrpage::covrpage()
+# covrpage::covrpage()
 
 ## CI ----
 ## Use this part of the script if you need to set up a CI
@@ -64,26 +87,26 @@ covrpage::covrpage()
 usethis::use_github()
 
 # GitHub Actions
-usethis::use_github_action()
+# usethis::use_github_action()
 # Chose one of the three
 # See https://usethis.r-lib.org/reference/use_github_action.html
 usethis::use_github_action_check_release()
-usethis::use_github_action_check_standard()
-usethis::use_github_action_check_full()
+# usethis::use_github_action_check_standard()
+# usethis::use_github_action_check_full()
 # Add action for PR
 usethis::use_github_action_pr_commands()
 
 # Travis CI
 usethis::use_travis()
-usethis::use_travis_badge()
+# usethis::use_travis_badge()
 
 # AppVeyor
 usethis::use_appveyor()
-usethis::use_appveyor_badge()
+# usethis::use_appveyor_badge()
 
 # Circle CI
 usethis::use_circleci()
-usethis::use_circleci_badge()
+# usethis::use_circleci_badge()
 
 # Jenkins
 usethis::use_jenkins()

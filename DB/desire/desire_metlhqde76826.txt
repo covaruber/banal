@@ -1,0 +1,18 @@
+  Input file for program Desire.	
+  Number of traits ...  	
+2	
+  Trait names ...	
+GYKGPHA	
+DTF	
+  Starting economic weights ...	
+1	
+1	
+  Heritabilities ...	
+0	
+0	
+  Standard Deviations ...	
+1	
+1	
+  Correlation matrix (rp on upper diagonal, rg on lower).	
+1	-0.189
+-0.189	1
